@@ -1,0 +1,17 @@
+<form novalidate [formGroup]="form" (submit)="createPerson(form)">
+  <input type="text" placeholder="Name" name="name" formControlName="name" />
+  <input type="text" placeholder="Phone" name="phone" formControlName="phone" />
+  <input type="text" placeholder="City" name="city" formControlName="city" />
+  <input
+    type="text"
+    placeholder="Street"
+    name="street"
+    formControlName="street"
+  />
+
+  <p *ngIf="error">
+    {{ error }}
+  </p>
+
+  <button type="submit" [disabled]="!form.valid">Create</button>
+</form>

@@ -1,0 +1,9 @@
+<section class="person-section" *ngIf="person">
+  <p>{{ person?.name }}</p>
+  <p>{{ person?.phone }}</p>
+  <p>{{ person?.address.street }}</p>
+  <p>{{ person?.address.city }}</p>
+
+  <button type="button" (click)="deletePerson(person?.id)">Delete</button>
+  <button type="button" routerLink="/">Close</button>
+</section>

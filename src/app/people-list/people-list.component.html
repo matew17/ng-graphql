@@ -1,0 +1,10 @@
+<section class="people-container">
+  <div
+    class="person-card"
+    *ngFor="let person of people"
+    [routerLink]="['/', person.name]"
+  >
+    <p>{{ person.name }}</p>
+    <p>{{ person.phone }}</p>
+  </div>
+</section>
